@@ -1,0 +1,75 @@
+header {
+  text-align: center;
+}
+
+aside {
+  background-color: cadetblue;
+  width: 70%;
+  margin: 2rem auto;
+  /* position: absolute; */
+  display: none;
+}
+
+input {
+  display: block;
+}
+
+ol {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  list-style: none;
+}
+
+li {
+  text-align: center;
+}
+article {
+  padding: 0.5rem 1rem;
+  background-color: gray;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#game-configuration {
+  width: 70%;
+  margin: auto;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+#start-button {
+  margin-top: 2rem;
+}
+
+#parent-grid {
+  width: fit-content;
+  margin: 2rem auto;
+  /* height: 5rem; */
+  background-color: bisque;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.grid-cell {
+  background-color: aqua;
+
+  /* height: 3rem; */
+  /* width: 100/3%; */
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+
+  text-align: center;
+  align-items: center;
+}
+
+/* .grid-cell p {
+  margin: 0;
+  padding: 0;
+} */
