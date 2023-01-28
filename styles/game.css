@@ -1,7 +1,7 @@
 #actual-game {
   text-align: center;
   margin: 2rem 0 4rem 0;
-  /* display: none; */
+  display: none;
 }
 
 #game-over {
@@ -28,7 +28,8 @@
 
 #game-board {
   list-style: none;
-  display: grid;
+  /* display: grid; */
+  display: none;
   padding: 0;
   margin: 1rem 0;
   grid-template-columns: repeat(3, 6rem);
@@ -47,14 +48,28 @@
   font-size: 2.5rem;
   font-weight: bold;
   transition: all 0.5s;
+  /* color: purple; */
 }
 
 #game-board li:hover {
   background-color: rgb(112, 13, 204);
+  color: white;
 }
 
 #game-board li.disabled {
   background-color: rgb(112, 13, 204);
   cursor: default;
   color: white;
+}
+
+#game-board li.winner {
+  background-color: green;
+}
+
+#draw {
+  display: none;
+}
+
+#winner {
+  display: block;
 }

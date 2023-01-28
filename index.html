@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="styles/overlays.css" />
     <link rel="stylesheet" href="styles/configuration.css" />
     <link rel="stylesheet" href="styles/game.css" />
+    <!-- <script src="js/variables.js" defer></script> -->
+    <script src="js/game-config.js" defer></script>
     <script src="js/tictactoe.js" defer></script>
+    <script src="js/variables.js" defer></script>
   </head>
   <body>
     <div id="backdrop"></div>
@@ -31,9 +34,14 @@
             <label for="playername">Player name</label>
             <input type="text" name="playername" id="playername" />
           </div>
+          <p id="errorOutput"></p>
           <div>
-            <button type="button" class="btn btn-alt">Cancel</button>
-            <button type="submit" class="btn">Confirm</button>
+            <button id="cancel-button" type="button" class="btn btn-alt">
+              Cancel
+            </button>
+            <button id="submit-button" type="submit" class="btn">
+              Confirm
+            </button>
           </div>
         </form>
       </aside>
@@ -42,17 +50,29 @@
           <li>
             <article>
               <h2>PLAYER 1</h2>
-              <h3>Player Name</h3>
+              <h3 id="player1-name-label">Player 1</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt">Edit</button>
+              <button
+                id="edit-button-player1"
+                class="btn btn-alt"
+                data-clickedplayer="1"
+              >
+                Edit
+              </button>
             </article>
           </li>
           <li>
             <article>
               <h2>PLAYER 2</h2>
-              <h3>Player Name</h3>
+              <h3 id="player2-name-label">Player 2</h3>
               <p class="player-symbol">O</p>
-              <button class="btn btn-alt">Edit</button>
+              <button
+                id="edit-button-player2"
+                class="btn btn-alt"
+                data-clickedplayer="2"
+              >
+                Edit
+              </button>
             </article>
           </li>
         </ol>
@@ -60,22 +80,27 @@
       </section>
       <section id="actual-game">
         <article id="game-over">
-          <h2>You won! <span id="winner-name">PLAYER NAME</span></h2>
+          <div id="winner">
+            <h2>You won! <span id="winner-name">PLAYER NAME</span></h2>
+          </div>
+          <div id="draw">
+            <h2>Draw!</h2>
+          </div>
           <p>Click start to start a new game</p>
         </article>
         <p>It's your turn <span id="active-player-name">PLAYER NAME</span></p>
         <ol id="game-board">
-          <li></li>
-          <li></li>
-          <li></li>
+          <li id="cell0" data-column="1" data-row="1"></li>
+          <li id="cell1"></li>
+          <li id="cell2"></li>
 
-          <li class="disabled">X</li>
-          <li></li>
-          <li class="disabled">X</li>
+          <li id="cell3"></li>
+          <li id="cell4"></li>
+          <li id="cell5"></li>
 
-          <li></li>
-          <li class="disabled">O</li>
-          <li></li>
+          <li id="cell6"></li>
+          <li id="cell7"></li>
+          <li id="cell8"></li>
         </ol>
       </section>
     </main>

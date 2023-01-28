@@ -10,6 +10,15 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: none;
 }
+.error input {
+  border-color: rgb(135, 38, 38);
+  background-color: rgb(252, 198, 198);
+}
+
+#errorOutput {
+  color: red;
+  font-size: small;
+}
 
 #backdrop {
   position: fixed;
